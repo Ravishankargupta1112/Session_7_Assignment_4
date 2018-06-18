@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Closures</title>
+	<script>
+		var outFunc=function(outer)
+		{
+			var innerFunc=function(inner)
+			{
+				return outer+inner;
+			}
+			return innerFunc;
+		};
+
+		var add=new outFunc(10);
+		console.dir(add);
+		console.log(add(20));
+	</script>
+</head>
+<body>
+	<h1>Please see in console to outputs</h1>
+</body>
+</html>
